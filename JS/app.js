@@ -55,15 +55,22 @@ class Boton {
     constructor(parentID, text) {
         this.parentID = parentID;
         this.text = text;
-    }
-    render()
+    }           // A las funciones dentro de un objeto, se los denomina Metodo y son las manera que tenemos
+    render()    // de interactuar con el objeto... La forma de implementacion luego seria: boton.render();
     {   
         let myappi = document.getElementById(this.parentID);
         // Notar como pasa el contenido de las variables por javascript al html.
-        myappi.innerHTML = "<button name = boton >" + this.text + "</button>"; 
+        myappi.innerHTML = myappi.innerHTML +  "<button name = boton >" + this.text + "</button>"; 
+        // myappi.innerHTML = "<button name = boton >" + this.text + "</button>"; Lo cambie porque no me permitia agregar mas de un boton. 
     }
 }
 let primerboton = new Boton("Ejercicio de la clase 4","Adentrooo");
 //Es interesante, Primero hay que crear un objeto, luego declarar una variable del tipo del objeto
 //y por ultimo, hay que llamar a la funcion que esta adentro del objeto...
- primerboton.render();
+primerboton.render();
+
+
+//Sentencia para construir el objeto:
+let pboton = new Boton("Ejercicio de la clase 4","Aden");
+//Sentencia para invocar al objeto:
+pboton.render();
