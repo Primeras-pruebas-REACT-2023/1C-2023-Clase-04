@@ -49,23 +49,21 @@ Que se dibuje un boton en html luego de llamar al render.
 
 Van a crear otra class input/text o el que sea y que se dibuje igual que boton en el html.
 
+*/
 
-
-class Button {
+class Boton {
     constructor(parentID, text) {
         this.parentID = parentID;
         this.text = text;
-        // completa this.text
     }
-
-    // Invente yo diseño mio...
-    render(){
-        let myApp = document.getElementById(this.parentID);
-
-        const myButtonHTML = myApp.innerHTML + "<button>"+ this.text + "</button>";
-
-        myApp.innerHTML = myButtonHTML; // VAmos a escribir el html para que se 
-        // dibuje un boton con el texto de this.text
+    render()
+    {   
+        let myappi = document.getElementById(this.parentID);
+        // Notar como pasa el contenido de las variables por javascript al html.
+        myappi.innerHTML = "<button name = boton >" + this.text + "</button>"; 
     }
 }
-*/
+let primerboton = new Boton("Ejercicio de la clase 4","Adentrooo");
+//Es interesante, Primero hay que crear un objeto, luego declarar una variable del tipo del objeto
+//y por ultimo, hay que llamar a la funcion que esta adentro del objeto...
+ primerboton.render();
