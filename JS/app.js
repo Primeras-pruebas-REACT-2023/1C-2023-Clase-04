@@ -74,3 +74,32 @@ primerboton.render();
 let pboton = new Boton("Ejercicio de la clase 4","Aden");
 //Sentencia para invocar al objeto:
 pboton.render();
+
+
+//Ahora voy a hacer uso del objeto input (que ya tiene parametros propios) ver: https://www.w3schools.com/tags/tag_input.asp
+class input {
+    constructor (parentID,type){
+        // if type != opciones validas
+        this.parentID=parentID;
+        this.type = type;
+    }
+    render (){
+        let myinput = document.getElementById(this.parentID);
+        myinput.innerHTML = myinput.innerHTML + "<input type ="+this.type+">";
+    }
+}
+let primerinput = new input ("Ejercicio de la clase 4","checkbox");
+primerinput.render();
+
+let otroinput = new input ("Ejercicio de la clase 4","date");
+otroinput.render();
+
+let inputpass = new input ("mas Ejercicio","password");
+inputpass.render();
+
+
+
+
+
+
+
